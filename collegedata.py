@@ -7,7 +7,7 @@ st.beta_set_page_config(layout="wide")
 
 @st.cache
 def loaddata():
-    df = pd.read_csv("data\salaries-by-region.csv")
+    df = pd.read_csv("salaries-by-region.csv")
 
     df['Starting Median Salary'] = df['Starting Median Salary'].apply(lambda x: x.replace('$','')).apply(lambda x: x.replace(',','')).astype(float)
     df['Mid-Career 75th Percentile Salary'] = df['Mid-Career 75th Percentile Salary'].apply(lambda x: x.replace('$','')).apply(lambda x: x.replace(',','')).astype(float)
